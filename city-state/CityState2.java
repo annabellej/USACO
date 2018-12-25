@@ -18,8 +18,8 @@ public class CityState2 {
     }
 
     public static void main(String[] args) throws IOException {
-        BufferedReader f = new BufferedReader(new FileReader("9.in"));
-        PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("9.out")));
+        BufferedReader f = new BufferedReader(new FileReader("citystate.in"));
+        PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("citystate.out")));
 
         StringTokenizer stk = new StringTokenizer(f.readLine());
         int pairs = Integer.parseInt(stk.nextToken());
