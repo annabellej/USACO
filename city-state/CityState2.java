@@ -4,7 +4,7 @@ import java.util.StringTokenizer;
 import java.util.TreeMap;
 import java.util.Map;
 
-public class CityState2 {
+public class CityState {
     public static void getfirst(String[] t, TreeMap<String, int[]> p, String c, String s, String k)
     {
         if (t[0].equals(c))
