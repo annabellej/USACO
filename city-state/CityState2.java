@@ -8,13 +8,10 @@ public class CityState {
     public static void getfirst(String[] t, TreeMap<String, int[]> p, String c, String s, String k)
     {
         if (t[0].equals(c))
-        {
             p.get(k)[0]++;
-        }
+        
         if (t[0].equals(s))
-        {
             p.get(k)[1]++;
-        }
     }
 
     public static void main(String[] args) throws IOException {
@@ -23,7 +20,6 @@ public class CityState {
 
         StringTokenizer stk = new StringTokenizer(f.readLine());
         int pairs = Integer.parseInt(stk.nextToken());
-
         int special = 0;
 
         TreeMap<String, int[]> places = new TreeMap<>();
@@ -41,22 +37,15 @@ public class CityState {
 
             String key = toSort[0] + toSort[1];
 
-            if (city.equals(state)) {
-                continue;
-            }
-
-            if (!places.containsKey(key)) {
+            if (city.equals(state)) continue;
+            if (!places.containsKey(key))
                 places.put(key, new int[2]);
-            }
 
             getfirst(toSort, places, city, state, key);
         }
-
-        for (Map.Entry<String,int[]> entry: places.entrySet())
-        {
+        for (Map.Entry<String,int[]> entry: places.entrySet()) {
             special += entry.getValue()[0] * entry.getValue()[1];
         }
-
         out.println(special);
         out.close();
     }
