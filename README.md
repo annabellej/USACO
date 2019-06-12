@@ -1,2 +1,2 @@
 # USACO
-This is a repository of my answers to various USACO problems.
+Repository of my USACO answers.
